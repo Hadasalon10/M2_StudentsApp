@@ -37,6 +37,12 @@ class StudentsListActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = StudentAdapter(students = students)
 
+        val button: Button = findViewById(R.id.add_student_button)
+        button.setOnClickListener {
+            val intent = Intent(this, NewStudentActivity::class.java)
+            startActivity(intent)
+        }
+
     }
     // Activity in the adapter
 
