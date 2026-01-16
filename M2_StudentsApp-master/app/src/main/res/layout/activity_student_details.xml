@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentDetailsActivity">
+
+    <ImageView
+        android:id="@+id/new_student_image_view"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginEnd="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile" />
+
+    <TextView
+        android:id="@+id/new_student_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_student_image_view" />
+
+    <TextView
+        android:id="@+id/new_student_id_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="ID"
+        app:layout_constraintStart_toStartOf="@+id/new_student_name_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/new_student_name_text_view" />
+
+    <TextView
+        android:id="@+id/new_student_phone_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Phone"
+        app:layout_constraintStart_toStartOf="@+id/new_student_id_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/new_student_id_text_view" />
+
+    <TextView
+        android:id="@+id/new_student_address_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Adress"
+        app:layout_constraintStart_toStartOf="@+id/new_student_phone_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/new_student_phone_text_view" />
+
+    <EditText
+        android:id="@+id/new_student_edit_name_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/new_student_name_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/new_student_name_text_view" />
+
+    <EditText
+        android:id="@+id/new_student_edit_id_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/new_student_id_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/new_student_edit_name_text_view"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/new_student_id_text_view" />
+
+    <EditText
+        android:id="@+id/new_student_edit_phone_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/new_student_phone_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/new_student_edit_id_text_view"
+        app:layout_constraintStart_toEndOf="@+id/new_student_phone_text_view" />
+
+    <EditText
+        android:id="@+id/new_student_edit_address_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/new_student_address_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/new_student_edit_phone_text_view"
+        app:layout_constraintStart_toEndOf="@+id/new_student_address_text_view" />
+
+    <CheckBox
+        android:id="@+id/new_student_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="Checked"
+        app:layout_constraintStart_toStartOf="@+id/new_student_address_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/new_student_address_text_view" />
+
+    <Button
+        android:id="@+id/new_student_save_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_student_checkBox" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
