@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NewStudentActivity">
+
+    <!-- Toolbar -->
+    <TextView
+        android:id="@+id/new_student_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="#D4D5D5"
+        android:gravity="center_vertical|start"
+        android:paddingStart="60dp"
+        android:text="New Student"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Back ImageButton -->
+    <ImageButton
+        android:id="@+id/new_student_imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_revert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/new_student_image_view"
@@ -15,7 +41,7 @@
         android:layout_marginEnd="250dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_student_toolbar"
         app:srcCompat="@drawable/profile" />
 
     <TextView
@@ -117,13 +143,13 @@
         android:layout_marginStart="4dp"
         android:layout_marginEnd="8dp"
         android:text="cancel"
-        app:layout_constraintBaseline_toBaselineOf="@+id/new_student_save_button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/student_details_edit_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/new_student_save_button" />
+        app:layout_constraintStart_toEndOf="@+id/student_details_edit_button" />
 
     <Button
-        android:id="@+id/new_student_save_button"
+        android:id="@+id/student_details_edit_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -141,8 +167,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/new_student_save_button"
+        app:layout_constraintBottom_toTopOf="@+id/student_details_edit_button"
         app:layout_constraintEnd_toEndOf="@+id/new_student_cancel_button"
-        app:layout_constraintStart_toStartOf="@+id/new_student_save_button" />
+        app:layout_constraintStart_toStartOf="@+id/student_details_edit_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

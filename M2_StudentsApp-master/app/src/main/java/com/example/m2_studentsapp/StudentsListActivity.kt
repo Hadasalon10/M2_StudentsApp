@@ -35,19 +35,23 @@ class StudentsListActivity : AppCompatActivity() {
         val students = Model.shared.students
 
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = StudentAdapter(students = students)
+        recyclerView.adapter = StudentAdapter(students = students) { position ->
+            val intent = Intent(this, StudentDetailsActivity::class.java)
+            intent.putExtra("student_index", position)
+            startActivity(intent)
+        }
 
         val button: Button = findViewById(R.id.add_student_button)
         button.setOnClickListener {
             val intent = Intent(this, NewStudentActivity::class.java)
             startActivity(intent)
         }
-
     }
     // Activity in the adapter
 
     class StudentAdapter(
-        private val students: List<Student>
+        private val students: List<Student>,
+        private val onItemClick: (Int) -> Unit //
     ) : RecyclerView.Adapter<StudentAdapter.StudentViewHolder>() {
 
         // ViewHolder
@@ -73,12 +77,15 @@ class StudentsListActivity : AppCompatActivity() {
             holder.nameTextView.text = student.name
             holder.idTextView.text = student.id
             holder.checkBox.isChecked = student.isChecked
+            holder.avatarImageView.setImageResource(R.drawable.profile)
 
             holder.checkBox.setOnCheckedChangeListener { _, isChecked ->
                 student.isChecked = isChecked
             }
 
-            holder.avatarImageView.setImageResource(R.drawable.profile)
+            holder.itemView.setOnClickListener {
+                onItemClick(position)
+            }
         }
 
 
