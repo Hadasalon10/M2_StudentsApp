@@ -7,111 +7,89 @@
     android:layout_height="match_parent"
     tools:context=".StudentDetailsActivity">
 
+    <TextView
+        android:id="@+id/student_details_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="#D4D5D5"
+        android:gravity="center_vertical|start"
+        android:paddingStart="60dp"
+        android:text="Student Details"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Back ImageButton -->
+    <ImageButton
+        android:id="@+id/student_details_imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_revert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
-        android:id="@+id/new_student_image_view"
+        android:id="@+id/student_details_image_view"
         android:layout_width="150dp"
         android:layout_height="200dp"
         android:layout_marginStart="68dp"
         android:layout_marginEnd="250dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/student_details_toolbar"
         app:srcCompat="@drawable/profile" />
 
     <TextView
-        android:id="@+id/new_student_name_text_view"
+        android:id="@+id/student_details_name_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="36dp"
-        android:text="Name"
+        android:text="Name: "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/new_student_image_view" />
+        app:layout_constraintTop_toBottomOf="@+id/student_details_image_view" />
 
     <TextView
-        android:id="@+id/new_student_id_text_view"
+        android:id="@+id/student_details_id_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="ID"
-        app:layout_constraintStart_toStartOf="@+id/new_student_name_text_view"
-        app:layout_constraintTop_toBottomOf="@+id/new_student_name_text_view" />
+        android:text="ID: "
+        app:layout_constraintStart_toStartOf="@+id/student_details_name_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/student_details_name_text_view" />
 
     <TextView
-        android:id="@+id/new_student_phone_text_view"
+        android:id="@+id/student_details_phone_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Phone"
-        app:layout_constraintStart_toStartOf="@+id/new_student_id_text_view"
-        app:layout_constraintTop_toBottomOf="@+id/new_student_id_text_view" />
+        android:text="Phone: "
+        app:layout_constraintStart_toStartOf="@+id/student_details_id_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/student_details_id_text_view" />
 
     <TextView
-        android:id="@+id/new_student_address_text_view"
+        android:id="@+id/student_details_address_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Adress"
-        app:layout_constraintStart_toStartOf="@+id/new_student_phone_text_view"
-        app:layout_constraintTop_toBottomOf="@+id/new_student_phone_text_view" />
-
-    <EditText
-        android:id="@+id/new_student_edit_name_text_view"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="50dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintBaseline_toBaselineOf="@+id/new_student_name_text_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/new_student_name_text_view" />
-
-    <EditText
-        android:id="@+id/new_student_edit_id_text_view"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintBaseline_toBaselineOf="@+id/new_student_id_text_view"
-        app:layout_constraintEnd_toEndOf="@+id/new_student_edit_name_text_view"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/new_student_id_text_view" />
-
-    <EditText
-        android:id="@+id/new_student_edit_phone_text_view"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintBaseline_toBaselineOf="@+id/new_student_phone_text_view"
-        app:layout_constraintEnd_toEndOf="@+id/new_student_edit_id_text_view"
-        app:layout_constraintStart_toEndOf="@+id/new_student_phone_text_view" />
-
-    <EditText
-        android:id="@+id/new_student_edit_address_text_view"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintBaseline_toBaselineOf="@+id/new_student_address_text_view"
-        app:layout_constraintEnd_toEndOf="@+id/new_student_edit_phone_text_view"
-        app:layout_constraintStart_toEndOf="@+id/new_student_address_text_view" />
+        android:text="Address: "
+        app:layout_constraintStart_toStartOf="@+id/student_details_phone_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/student_details_phone_text_view" />
 
     <CheckBox
-        android:id="@+id/new_student_checkBox"
+        android:id="@+id/student_details_checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
         android:text="Checked"
-        app:layout_constraintStart_toStartOf="@+id/new_student_address_text_view"
-        app:layout_constraintTop_toBottomOf="@+id/new_student_address_text_view" />
+        app:layout_constraintStart_toStartOf="@+id/student_details_address_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/student_details_address_text_view" />
 
     <Button
-        android:id="@+id/new_student_save_button"
+        android:id="@+id/student_details_edit_button"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
@@ -119,6 +97,46 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/new_student_checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/student_details_checkBox" />
+
+    <TextView
+        android:id="@+id/student_details_name_text_view_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/student_details_name_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/student_details_name_text_view" />
+
+    <TextView
+        android:id="@+id/student_details_id_text_view_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/student_details_id_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/student_details_id_text_view" />
+
+    <TextView
+        android:id="@+id/student_details_phone_text_view_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/student_details_phone_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/student_details_phone_text_view" />
+
+    <TextView
+        android:id="@+id/student_details_address_text_view_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/student_details_address_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/student_details_address_text_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

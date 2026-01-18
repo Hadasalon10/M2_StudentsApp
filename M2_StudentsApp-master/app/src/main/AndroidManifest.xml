@@ -12,25 +12,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.M2_StudentsApp">
         <activity
-            android:name=".StudentDetailsActivity"
+            android:name=".EditStudentActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-    </activity>
-
-    <activity
-            android:name=".NewStudentActivity"
+        </activity>
+         <activity
+            android:name=".StudentDetailsActivity"
             android:exported="true">
         </activity>
         <activity
-            android:name=".StudentsListActivity"
+            android:name=".NewStudentActivity"
             android:exported="true"></activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".StudentsListActivity"
             android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
     </application>
 
 </manifest>
